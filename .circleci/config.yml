@@ -14,7 +14,12 @@ jobs:
       - checkout
       - run:
           name: 'Execute GitHub Actions'
-          command: 'curl -X POST -H "Authorization: token ${PAT}" -H "Accept: application/vnd.github.v3+json" ${URL} -d "{\"ref\":\"main\", \"inputs\": {\"sample\": \"Hello from CircleCI\"}}"'
+          command: |
+            curl -X POST \
+              -H "Authorization: token ${PAT}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              ${URL} \
+              -d "{\"ref\":\"main\", \"inputs\": {\"sample\": \"Hello from CircleCI\"}}"
 
 workflows:
   my-workflow:
