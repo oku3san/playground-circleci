@@ -21,6 +21,4 @@ workflows:
   my-workflow:
     jobs:
       - hello-job
-      - execute-github-actions:
-          requires:
-            - hello-job
+      - execute-github-actions
