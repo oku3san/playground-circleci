@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  hello-job:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run: echo "hello world"
+
+workflows:
+  my-workflow:
+    jobs:
+      - hello-job
