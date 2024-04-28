@@ -33,5 +33,5 @@ workflows:
     jobs:
       - hello-job
       - execute-github-actions:
-        requires:
-          - hello-job
+          requires:
+            - hello-job
