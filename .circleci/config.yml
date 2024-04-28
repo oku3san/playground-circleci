@@ -27,6 +27,8 @@ jobs:
               }
             }
             EOS
+    requires:
+      - hello-job
 
 workflows:
   my-workflow:
