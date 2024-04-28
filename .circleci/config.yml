@@ -12,9 +12,7 @@ jobs:
       - image: cimg/base:current
     steps:
       - checkout
-      - run:
-        command: |
-          curl -X POST -H 'Authorization: token ${PAT}' -H "Accept: application/vnd.github.v3+json" ${URL} -d '{"ref":"main", "inputs": {"sample": "Hello from CircleCI"}
+      - run: 'curl -X POST -H \'Authorization: token ${PAT}\' -H "Accept: application/vnd.github.v3+json" ${URL} -d '{"ref":"main", "inputs": {"sample": "Hello from CircleCI"}''
 
 
 workflows:
