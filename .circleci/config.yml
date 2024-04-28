@@ -27,11 +27,11 @@ jobs:
               }
             }
             EOS
-    requires:
-      - hello-job
 
 workflows:
   my-workflow:
     jobs:
       - hello-job
-      - execute-github-actions
+      - execute-github-actions:
+        requires:
+          - hello-job
