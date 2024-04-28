@@ -19,7 +19,7 @@ jobs:
               -H "Authorization: token ${PAT}" \
               -H "Accept: application/vnd.github.v3+json" \
               ${URL} \
-              -d "{\"ref\":\"main\", \"inputs\": {\"sample\": \"Hello from CircleCI\"}}"
+              -d '{"ref":"main", "inputs": {"sample": "Hello from CircleCI"}}'
 
 workflows:
   my-workflow:
