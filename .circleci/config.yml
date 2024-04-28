@@ -19,7 +19,7 @@ jobs:
             -H "Authorization: token ${PAT}" \
             -H "Accept: application/vnd.github.v3+json" \
             ${URL} \
-            -d @- <<EOS
+            -d @- \<<EOS
             {
               "ref": "main",
               "inputs": {
